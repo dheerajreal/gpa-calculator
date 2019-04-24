@@ -1,13 +1,21 @@
 print ("Welcome to gpa calculator")
-subs=int(input("Enter number of subjects:"))
+#accept number of subjects
+try:
+    subs=int(input("Enter number of subjects:"))
+except:
+    print("ERROR:\nenter numeric values only")
+    quit()
 marks=[]
 gpa=[]
-
 for i in range(subs):
-    sub_marks=int(input(f"Give marks in paper {i+1} :"))
+    #accept marks for each subject
+    try:
+        sub_marks=int(input(f"Give marks in paper {i+1} :"))  
+    except:
+        print("ERROR:\nenter integer values only")    
+        quit()
     marks.append(sub_marks)
-
-
+    #assign gpa for each subject
     if sub_marks>100 or sub_marks<0:
         print("invalid marks")
     if sub_marks<40:
