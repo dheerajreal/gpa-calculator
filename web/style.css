@@ -1,9 +1,13 @@
 html{
-    text-align :center;
     background-color:#e4e4e4;
     color:#858484;
+}
+body{
     font-size: 200%;
     font-family: monospace;
+    max-width: 50em;
+    line-height: 1.5;
+    padding-left:10%;
 }
 h1,h2{
     color: #3b3a3a;
