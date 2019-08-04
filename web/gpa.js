@@ -3,7 +3,7 @@ document.write("<h1>GPA calculator<br /></h1>");
 var subs=prompt("Number of subjects?");
 //checking for valid values
 subs=parseInt(subs);
-if (!subs || subs<0) {
+if (!(Number.isInteger(subs)) || subs<0) {
     document.write("<h2 class=error> Enter positive  numeric value for subject!</h2>");
     errorMessage();
 }
@@ -17,7 +17,7 @@ for (i=0;i<subs;i++){
     var marks=prompt("Enter marks in paper "+(i+1));
     //checking for valid values
     marks=parseInt(marks);
-    if (!marks || marks>100 || marks<0){
+    if ( !(Number.isInteger(marks)) || marks>100 || marks<0){
         document.write("<h2 class=error> Only numeric values between 0 and 100 are allowed!</h2>");
         errorMessage();
     }
