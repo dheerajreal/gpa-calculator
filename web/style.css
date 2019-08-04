@@ -5,9 +5,9 @@ html{
 body{
     font-size: 200%;
     font-family: monospace;
-    max-width: 50em;
+    max-width: 90%;
     line-height: 1.5;
-    padding-left:10%;
+    padding:10px;
 }
 h1,h2{
     color: #3b3a3a;
