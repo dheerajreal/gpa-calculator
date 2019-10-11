@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>GPA Calculator</title>
+</head>
+
+<body class="container">
+    <br>
+    <div class="jumbotron">
+        <h3>GPA Calculator</h3>
+
+    </div>
+    <p>Enter marks in below form to calculate your SGPA. only works for 10 subjects.</p>
+    <form class="form-group " id="myform" target="frame">
+        <div class="form-group">
+            <input type="number" id="1" min=0 max=100 step=1 class="form-control" placeholder="Paper one" required>
+        </div>
+        <div class="form-group">
+            <input type="number" id="2" min=0 max=100 step=1 class="form-control" placeholder="Paper two" required>
+        </div>
+        <div class="form-group">
+            <input type="number" id="3" min=0 max=100 step=1 class="form-control" placeholder="Paper three" required>
+        </div>
+        <div class="form-group">
+            <input type="number" id="4" min=0 max=100 step=1 class="form-control" placeholder="Paper four" required>
+        </div>
+        <div class="form-group">
+            <input type="number" id="5" min=0 max=100 step=1 class="form-control" placeholder="Paper five" required>
+        </div>
+        <div class="form-group">
+            <input type="number" id="6" min=0 max=100 step=1 class="form-control" placeholder="Paper six" required>
+        </div>
+        <div class="form-group">
+            <input type="number" id="7" min=0 max=100 step=1 class="form-control" placeholder="Paper seven" required>
+        </div>
+        <div class="form-group">
+            <input type="number" id="8" min=0 max=100 step=1 class="form-control" placeholder="Practical one" required>
+        </div>
+        <div class="form-group">
+            <input type="number" id="9" min=0 max=100 step=1 class="form-control" placeholder="Practical two" required>
+        </div>
+        <div class="form-group">
+            <input type="number" id="10" min=0 max=100 step=1 class="form-control" placeholder="Practical three" required>
+        </div>
+        <button type="submit" class="btn btn-primary" onclick="calculate()">Calculate </button>
+
+    </form>
+    <br>
+    <div class="invisible card container-fluid">
+        <div class="card-body">
+            <h5 class="card-title text-success">Result</h5>
+            <p class="card-text">Sum: <b id="sum"></b></p>
+            <p class="card-text">percent: <b id="percent"></b></p>
+            <p class="card-text">gpa: <b id="gpa"></b></p>
+
+        </div>
+    </div>
+    <footer class="card-body">
+        <p>&copy; Dheeraj Tiwari</p>
+    </footer>
+    <noscript>JavaScript is required. </noscript>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    <iframe name="frame" style="display: none"></iframe>
+</body>
+
+</html>
