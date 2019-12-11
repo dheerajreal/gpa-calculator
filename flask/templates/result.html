@@ -1,0 +1,11 @@
+{% extends "base.html" %} {% block body%} {%if result %}
+<div class="card container-fluid">
+    <div class="card-body">
+        <h5 class="card-title text-success">Result</h5>
+        <p class="card-text">Total: <b>{{result.total}}</b></p>
+        <p class="card-text">Percent: <b>{{result.average}}</b></p>
+        <p class="card-text">SGPA: <b>{{result.gpa_final}}</b></p>
+
+    </div>
+</div>
+{%endif%} {% endblock %}
