@@ -36,13 +36,13 @@ function calculate() {
             gpaList.push(4);
         } else if (marks >= 45 && marks < 50) {
             gpaList.push(5);
-        } else if (marks >= 50 && marks < 60) {
+        } else if (marks >= 50 && marks < 55) {
             gpaList.push(6);
-        } else if (marks >= 60 && marks < 70) {
+        } else if (marks >= 55 && marks < 60) {
             gpaList.push(7);
-        } else if (marks >= 70 && marks < 75) {
+        } else if (marks >= 60 && marks < 70) {
             gpaList.push(8);
-        } else if (marks >= 75 && marks < 80) {
+        } else if (marks >= 70 && marks < 80) {
             gpaList.push(9);
         } else if (marks >= 80) {
             gpaList.push(10);
@@ -52,20 +52,16 @@ function calculate() {
     //add all values in marksList
     for (i = 0; i < marksList.length; i++) {
         sum += marksList[i];
-
     }
 
     //add all values in gpaList
     for (i = 0; i < gpaList.length; i++) {
         gpa += gpaList[i];
-
     }
     if (Number.isInteger(sum) && Number.isInteger(gpa)) {
         $(".invisible").removeClass("invisible");
         $("#sum").text(sum);
         $("#percent").text((sum / 10).toFixed(2));
         $("#gpa").text((gpa / 10).toFixed(2));
-
     }
-
 }

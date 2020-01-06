@@ -24,13 +24,13 @@ for i in range(subs):
         gpa.append(4)
     elif sub_marks >= 45 and sub_marks < 50:
         gpa.append(5)
-    elif sub_marks >= 50 and sub_marks < 60:
+    elif sub_marks >= 50 and sub_marks < 55:
         gpa.append(6)
-    elif sub_marks >= 60 and sub_marks < 70:
+    elif sub_marks >= 55 and sub_marks < 60:
         gpa.append(7)
-    elif sub_marks >= 70 and sub_marks < 75:
+    elif sub_marks >= 60 and sub_marks < 70:
         gpa.append(8)
-    elif sub_marks >= 75 and sub_marks < 80:
+    elif sub_marks >= 70 and sub_marks < 80:
         gpa.append(9)
     elif sub_marks >= 80:
         gpa.append(10)
