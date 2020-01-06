@@ -13,13 +13,13 @@ def gpa_calculate(sub_marks):
         gpa = 4
     elif sub_marks >= 45 and sub_marks < 50:
         gpa = 5
-    elif sub_marks >= 50 and sub_marks < 60:
+    elif sub_marks >= 50 and sub_marks < 55:
         gpa = 6
-    elif sub_marks >= 60 and sub_marks < 70:
+    elif sub_marks >= 55 and sub_marks < 60:
         gpa = 7
-    elif sub_marks >= 70 and sub_marks < 75:
+    elif sub_marks >= 60 and sub_marks < 70:
         gpa = 8
-    elif sub_marks >= 75 and sub_marks < 80:
+    elif sub_marks >= 70 and sub_marks < 80:
         gpa = 9
     elif sub_marks >= 80:
         gpa = 10
@@ -34,6 +34,8 @@ def result_calculate(marks_list, gpa_list):
     return result
 
 # database stuff
+
+
 def db_work(result):
     db = sqlite3.connect("app.db")
     cursor = db.cursor()
