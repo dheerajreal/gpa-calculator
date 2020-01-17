@@ -25,8 +25,8 @@ def index():
             gpa_list = [gpa_calculate(marks) for marks in marks_list]
             result = result_calculate(marks_list, gpa_list)
             passing = all(gpa_list)
-
-            db_work_extra(marks_list, result)
+            # uncomment for database
+            # db_work_extra(marks_list, result)
             return render_template(
                 "result.html",
                 result=result,
