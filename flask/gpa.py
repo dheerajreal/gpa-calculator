@@ -38,7 +38,7 @@ def result_calculate(marks_list, gpa_list):
 
 
 def db_work_extra(marks_list, result):
-    db = sqlite3.connect("app.db")
+    db = sqlite3.connect("./mysite/app.db")
     cursor = db.cursor()
     cursor.execute(
         "INSERT INTO FULL VALUES ({},{},{},{},{},{},{},{},{},{},{},{},{}) "
