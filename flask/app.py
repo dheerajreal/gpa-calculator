@@ -34,6 +34,11 @@ def index():
     else:
         return render_template("gpa.html")
 
+# remove favicon.ico 404
+@app.route('/favicon.ico')
+def favicon():
+    return ""
+
 
 if __name__ == "__main__":
     app.run(debug=True)
