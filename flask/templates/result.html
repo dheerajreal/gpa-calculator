@@ -5,6 +5,16 @@
         <p class="card-text">Total: <b>{{result.total}}</b></p>
         <p class="card-text">Percent: <b>{{result.average}}</b></p>
         <p class="card-text">SGPA: <b>{{result.gpa_final}}</b></p>
+        {% if passing %}
+        <p class="card-text text-success">
+            Congratulations, You've passed in all subjects!
+        </p>
+        {% else %}
+        <p class="card-text ">
+            You'll have to retake one or more exams before you pass.
+        </p>
+
+        {% endif %}
 
     </div>
 </div>

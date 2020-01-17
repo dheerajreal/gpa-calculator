@@ -24,9 +24,14 @@ def index():
                           five, six, seven, eight, nine, ten]
             gpa_list = [gpa_calculate(marks) for marks in marks_list]
             result = result_calculate(marks_list, gpa_list)
+            passing = all(gpa_list)
 
             db_work_extra(marks_list, result)
-            return render_template("result.html", result=result)
+            return render_template(
+                "result.html",
+                result=result,
+                passing=passing
+            )
         except Exception as e:
             print(e)
             return render_template("gpa.html")
