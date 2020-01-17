@@ -5,7 +5,6 @@ import sqlite3
 
 
 def gpa_calculate(sub_marks: int) -> int:
-    assert type(sub_marks) == int
     if sub_marks > 100 or sub_marks < 0:
         raise ValueError
     if sub_marks < 40:
