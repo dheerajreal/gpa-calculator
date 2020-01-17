@@ -63,5 +63,6 @@ function calculate() {
         $("#sum").text(sum);
         $("#percent").text((sum / 10).toFixed(2));
         $("#gpa").text((gpa / 10).toFixed(2));
+        document.querySelector("form").remove();
     }
 }
