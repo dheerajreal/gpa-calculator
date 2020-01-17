@@ -4,9 +4,10 @@ import sqlite3
 # calculate gpa
 
 
-def gpa_calculate(sub_marks):
+def gpa_calculate(sub_marks: int) -> int:
+    assert type(sub_marks) == int
     if sub_marks > 100 or sub_marks < 0:
-        gpa = None
+        raise ValueError
     if sub_marks < 40:
         gpa = 0
     elif sub_marks >= 40 and sub_marks < 45:
@@ -36,21 +37,17 @@ def result_calculate(marks_list, gpa_list):
 # database stuff
 
 
-def db_work(result):
-    db = sqlite3.connect("app.db")
-    cursor = db.cursor()
-    cursor.execute("INSERT INTO RECORD VALUES ({},{},{}) ".format(
-        result["total"], result["average"], result["gpa_final"]))
-    db.commit()
-    db.close()
-
-
 def db_work_extra(marks_list, result):
     db = sqlite3.connect("app.db")
     cursor = db.cursor()
-    #cursor.execute("INSERT INTO MARKS VALUES ({},{},{},{},{},{},{},{},{},{}) ".format(*marks_list))
-
-    cursor.execute("INSERT INTO FULL VALUES ({},{},{},{},{},{},{},{},{},{},{},{},{}) ".format(
-        *marks_list, result["total"], result["average"], result["gpa_final"]))
+    cursor.execute(
+        "INSERT INTO FULL VALUES ({},{},{},{},{},{},{},{},{},{},{},{},{}) "
+        .format(
+            *marks_list,
+            result["total"],
+            result["average"],
+            result["gpa_final"]
+        )
+    )
     db.commit()
     db.close()

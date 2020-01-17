@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
-import sqlite3
-from gpa import gpa_calculate, result_calculate, db_work_extra, db_work
+from gpa import db_work_extra, gpa_calculate, result_calculate
+
 # defining app
 app = Flask(__name__)
 
@@ -24,7 +24,7 @@ def index():
                           five, six, seven, eight, nine, ten]
             gpa_list = [gpa_calculate(marks) for marks in marks_list]
             result = result_calculate(marks_list, gpa_list)
-            # db_work(result)
+
             db_work_extra(marks_list, result)
             return render_template("result.html", result=result)
         except Exception as e:
