@@ -1,6 +1,7 @@
 # gpa-calculator
 
-This calculator can be used for calculating SGPA by my classmates
+This calculator can be used for calculating SGPA by my classmates.
+
 Uses the following formula
 
 |                  |                |
@@ -15,4 +16,4 @@ Uses the following formula
 | >= 40            | 4              |
 | < 40             | 0              |
 
-## [click here to use on heroku](https://rjcsgpa.herokuapp.com)
+## [Click here to use on heroku](https://rjcsgpa.herokuapp.com)
