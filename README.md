@@ -4,9 +4,8 @@ This calculator can be used for calculating SGPA by my classmates.
 
 Uses the following formula
 
-|                  |                |
-| ---------------- | -------------- |
 | marks in subject | gpa in subject |
+| ---------------- | -------------- |
 | >= 80            | 10             |
 | >= 70            | 9              |
 | >= 60            | 8              |
