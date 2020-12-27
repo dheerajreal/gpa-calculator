@@ -1,6 +1,6 @@
 {% extends "base.html" %}{% block body%}
 <p>Enter marks in below form to calculate your SGPA. only works for 10 subjects.</p>
-<form action="/" method="post" class="form-group ">
+<form action="/ten" method="post" class="form-group ">
     <div class="form-group">
         <input type="number" name="one" min=0 max=100 step=1 class="form-control" placeholder="Paper one" required>
     </div>
@@ -23,13 +23,15 @@
         <input type="number" name="seven" min=0 max=100 step=1 class="form-control" placeholder="Paper seven" required>
     </div>
     <div class="form-group">
-        <input type="number" name="eight" min=0 max=100 step=1 class="form-control" placeholder="Practical one" required>
+        <input type="number" name="eight" min=0 max=100 step=1 class="form-control" placeholder="Practical one"
+            required>
     </div>
     <div class="form-group">
         <input type="number" name="nine" min=0 max=100 step=1 class="form-control" placeholder="Practical two" required>
     </div>
     <div class="form-group">
-        <input type="number" name="ten" min=0 max=100 step=1 class="form-control" placeholder="Practical three" required>
+        <input type="number" name="ten" min=0 max=100 step=1 class="form-control" placeholder="Practical three"
+            required>
     </div>
     <button type="submit" class="btn btn-info">Calculate </button>
 </form>
