@@ -29,8 +29,10 @@ def gpa_calculate(sub_marks: int) -> int:
 def result_calculate(marks_list, gpa_list):
     total = sum(marks_list)
     avg = total/len(marks_list)
-    gpa_final = sum(gpa_list)/len(marks_list)
-    result = {"total": total, "average": avg, "gpa_final": gpa_final}
+    gpa_final = sum(gpa_list)/len(gpa_list)
+    result = {
+        "total": total, "average": avg, "gpa_final": gpa_final
+    }
     return result
 
 # database stuff
