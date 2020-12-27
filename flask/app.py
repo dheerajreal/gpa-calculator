@@ -8,8 +8,10 @@ app.secret_key = "some_secret_key"
 # defining routes
 
 
+@app.route('/ten', methods=["GET", "POST"])
 @app.route('/', methods=["GET", "POST"])
 def index():
+    template_name = "ten.html"
     if request.method == "POST":
         try:
             one = int(request.form.get("one"))
@@ -23,21 +25,22 @@ def index():
             nine = int(request.form.get("nine"))
             ten = int(request.form.get("ten"))
 
-            marks_list = [one, two, three, four,
-                          five, six, seven, eight, nine, ten]
+            marks_list = [
+                one, two, three, four, five, six, seven, eight, nine, ten
+            ]
             gpa_list = [gpa_calculate(marks) for marks in marks_list]
             result = result_calculate(marks_list, gpa_list)
             passing = all(gpa_list)
-            # uncomment for database
-            # db_work_extra(marks_list, result)
+
             return render_template(
                 "result.html",
                 result=result,
                 passing=passing
             )
         except Exception as e:
+            flash("Invalid data received", category="danger")
             print(e)
-            return render_template("gpa.html")
+            return render_template(template_name)
 
     else:
         return render_template("gpa.html")
