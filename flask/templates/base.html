@@ -22,7 +22,19 @@
 
 
     <div class="container">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+            <div class=flashes>
+                {% for category, message in messages %}
 
+                <div class="alert alert-{{ category }} alert-dismissible ">
+                    {{ message }}
+
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+            {% endwith %}
         {% block body%} {% endblock %}
 
 
