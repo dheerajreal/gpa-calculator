@@ -8,9 +8,13 @@ app.secret_key = "some_secret_key"
 # defining routes
 
 
-@app.route('/ten', methods=["GET", "POST"])
-@app.route('/', methods=["GET", "POST"])
+@app.route('/', methods=["GET"])
 def index():
+    return render_template("gpa.html")
+
+
+@app.route('/ten', methods=["GET", "POST"])
+def ten():
     template_name = "ten.html"
     if request.method == "POST":
         try:
@@ -43,7 +47,7 @@ def index():
             return render_template(template_name)
 
     else:
-        return render_template("gpa.html")
+        return render_template(template_name)
 
 
 @app.route('/eight', methods=["GET", "POST"])
